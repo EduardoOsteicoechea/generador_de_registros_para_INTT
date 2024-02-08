@@ -38,7 +38,7 @@ modelo_6 = Modelo_6(
 nombre_de_archivo_a_generar = input("nombre de archivo a generar: ")
 
 
-with open(nombre_de_archivo_a_generar,"w") as archivo:
+with open(nombre_de_archivo_a_generar + ".txt","w") as archivo:
 	archivo.write(modelo_4.imprimir_linea())
 	archivo.write(registros_de_numeral_5)
 	archivo.write(modelo_6.imprimir_linea())
