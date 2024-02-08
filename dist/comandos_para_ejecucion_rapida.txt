@@ -1,0 +1,14 @@
+inciales de compañia: LU
+numero de envio: 0000001
+fecha de envio: 20240125
+hora: 041259
+nombre de importadora: CSK MOTOS IMPORT C.A.
+numero de registro: MDMVP122
+hecha de fin de convenio: 20231231
+especifique la ruta del archivo .xlsx: carga_de_motos_intt_2024-02-08.xlsx
+cantidad de registros tipo ma: 196
+cantidad de registros tipo mm: 0
+cantidad de registros tipo me: 0
+
+
+nombre de archivo a generar: registros_2024-02-08
