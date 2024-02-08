@@ -1,1 +1,0 @@
-pyinstaller --onefile --name GRE_INTT generar_registro.py
