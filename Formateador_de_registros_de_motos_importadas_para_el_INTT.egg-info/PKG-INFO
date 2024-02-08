@@ -1,4 +1,0 @@
-Metadata-Version: 2.1
-Name: Formateador-de-registros-de-motos-importadas-para-el-INTT
-Version: 1.0.0
-Summary: Este es un programa para extraer, procesar, preparar, formatear y generar registros de motos en un archivo .txt, apartir de un archivo .xlsx formateado de acuerdo al manual de muestra compartido junto con el ejecutable de este programa para importación de motos de acuerdo al numeral 4,5 y 6 del documento de estructura y diseño de archivo de carga de origen para empresas bajo convenio, que está vigente en la fecha 2024-02-08
