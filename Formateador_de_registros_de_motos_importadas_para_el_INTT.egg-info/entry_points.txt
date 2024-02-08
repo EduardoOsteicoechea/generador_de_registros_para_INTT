@@ -1,0 +1,2 @@
+[console_scripts]
+entry = generar_registro.py

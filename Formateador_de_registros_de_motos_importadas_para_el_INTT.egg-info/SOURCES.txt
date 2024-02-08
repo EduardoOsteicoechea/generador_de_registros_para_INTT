@@ -1,0 +1,12 @@
+Modelo_4.py
+Modelo_5.py
+Modelo_6.py
+generar_registro.py
+generar_registros_de_numeral_5.py
+obtener_datos_de_excel.py
+setup.py
+Formateador_de_registros_de_motos_importadas_para_el_INTT.egg-info/PKG-INFO
+Formateador_de_registros_de_motos_importadas_para_el_INTT.egg-info/SOURCES.txt
+Formateador_de_registros_de_motos_importadas_para_el_INTT.egg-info/dependency_links.txt
+Formateador_de_registros_de_motos_importadas_para_el_INTT.egg-info/entry_points.txt
+Formateador_de_registros_de_motos_importadas_para_el_INTT.egg-info/top_level.txt
