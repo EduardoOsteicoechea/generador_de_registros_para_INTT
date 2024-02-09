@@ -6,12 +6,12 @@ def obtener_datos_de_excel(nombre_de_archivo):
 
 	lista_de_filas = []
 
-	contador = 1
+	contador = 0
 
 	for index, row in df.iterrows():
 		fila_como_lista = row.values.tolist()
 		nueva_lista_de_textos = []
-		contador_de_celda = 1
+		contador_de_celda = 0
 		
 		for celda in fila_como_lista:
 			nueva_lista_de_textos.append(str(celda))

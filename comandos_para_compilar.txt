@@ -1,0 +1,13 @@
+function Prompt {
+    $ESC = [char]27
+    "$ESC[44mPS $($executionContext.SessionState.Path.CurrentLocation)$ESC[0m> "
+}
+Descarga el script get-pip.py
+python get-pip.py (and add to path)
+pip --version
+pip install pandas openpyxl
+pip install pandas xlrd
+python -m pip install pyinstaller
+pip install pyinstaller-setuptools
+pyinstaller --onefile --icon=icon.ico --name GRE_INTT generar_registro.py
+pyinstaller --onefile --icon=icon.ico --name Creador_de_registros_para_carga_de_origen_importado_y_nacional generar_registro.py

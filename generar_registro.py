@@ -1,49 +1,49 @@
 from Modelo_4 import Modelo_4
-from Modelo_6 import Modelo_6
-from generar_registros_de_numeral_5 import generar_registros_de_numeral_5
+from generar_registros_de_numeral_5_y_6 import generar_registros_de_numeral_5_y_6
 from obtener_datos_de_excel import obtener_datos_de_excel
 
-inciales_de_compañia = input("inciales de compañia: ")
-numero_de_envio = input("numero de envio: ")
-fecha_de_envio = input("fecha de envio: ")
-hora = input("hora: ")
-nombre_de_importadora = input("nombre de importadora: ")
-numero_de_registro = input("numero de registro: ")
-hecha_de_fin_de_convenio = input("hecha de fin de convenio: ")
+print("Creador de registros para carga de origen importado y nacional en Venezuela.")
+print("Versión 1.0.0.")
+print("Desarollado por Eduardo Osteicoechea en febrero del 2024.")
+print("Este programa posee garantía hasta mayo del 2024.")
+print("Para mantenimiento y actualización contáctame a eduardooost@gmail.com.")
+print("\n")
+print("Genera los registros siguiendo las indicaciones que encontrarás más abajo: ")
+print("\n")
 
-modelo_4 = Modelo_4(
+inciales_de_compañia = input("Inciales de compañia: ")
+numero_de_envio = input("Numero de envio: ")
+fecha_de_envio = input("Fecha de envio: ")
+hora = input("Hora: ")
+nombre_de_importadora = input("Nombre de importadora: ")
+numero_de_registro = input("Número de registro: ")
+fecha_de_fin_de_convenio = input("Fecha de fin de convenio: ")
+
+registros_de_numeral_4 = Modelo_4(
 	inciales_de_compañia,
 	numero_de_envio,
 	fecha_de_envio,
 	hora,
 	nombre_de_importadora,
 	numero_de_registro,
-	hecha_de_fin_de_convenio
-)
+	fecha_de_fin_de_convenio
+).imprimir_linea()
 
-ruta_de_archivo = input("especifique la ruta del archivo .xlsx: ")
+ruta_de_archivo = input("Ruta del archivo .xlsx: ")
 datos_de_archivo_xlsx = obtener_datos_de_excel(ruta_de_archivo)
-registros_de_numeral_5 = generar_registros_de_numeral_5(datos_de_archivo_xlsx)
+registros_de_numeral_5_y_6 = generar_registros_de_numeral_5_y_6(datos_de_archivo_xlsx)
 
-cantidad_de_registros_tipo_ma = input("cantidad de registros tipo ma: ")
-cantidad_de_registros_tipo_mm = input("cantidad de registros tipo mm: ")
-cantidad_de_registros_tipo_me = input("cantidad de registros tipo me: ")
-
-modelo_6 = Modelo_6(
-	cantidad_de_registros_tipo_ma,
-	cantidad_de_registros_tipo_mm,
-	cantidad_de_registros_tipo_me,
-)
-
-nombre_de_archivo_a_generar = input("nombre de archivo a generar: ")
-
+nombre_de_archivo_a_generar = input("Nombre de archivo a generar: ")
 
 with open(nombre_de_archivo_a_generar + ".txt","w") as archivo:
-	archivo.write(modelo_4.imprimir_linea())
-	archivo.write(registros_de_numeral_5)
-	archivo.write(modelo_6.imprimir_linea())
+	archivo.write(registros_de_numeral_4)
+	archivo.write(registros_de_numeral_5_y_6)
 
-print("archivo \"" + nombre_de_archivo_a_generar + "\" creado exitosamente")
+print("\n")
+print("Archivo \"" + nombre_de_archivo_a_generar + ".txt\" creado exitosamente.")
+print("Ubique el archivo \"" + nombre_de_archivo_a_generar + ".txt\" en la misma carpeta donde ejecutó este programa.")
+input("Presione la tecla \"enter\" o \"esc\" para culminar.")
+print("\n")
 
 
 

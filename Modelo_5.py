@@ -1,23 +1,16 @@
 class Modelo_5:
 	def __init__(
 		self, 
-		
 		tipo_de_movimiento: str = "xx",
 		numero_de_registro_correlativo_de_la_empresa: str = "0000000",
 		numero_de_modificacion: str = "00",
 		marca: str = "xxx",
-			#(1) 1   espacio(s) de ( )
 		serie: str = "xxxxxxxxxxxxxxx",
-			#(2)  9   espacio(s) de ( ) 
 		modelo: str = "xxxxxxxxxxxxxxx",
-			#(3)  9   espacio(s) de ( ) 
 		ano_modelo: str = "0000",
 		serial_de_la_carroceria: str = "xxxxxxxxxxxxxxxxxx",
-			#(4)  1   espacio(s) de ( ) 
 		serial_del_motor: str = "xxxxxxxxxxxxxxxxxx",
-			#(5)  7   espacio(s) de ( ) 
 		placa: str = "xxxxxxx",
-			#(6)  2   espacio(s) de ( ) 
 		color_1: str = "xx",
 		color_2: str = "xx",
 		peso_tara: str = "00000",
@@ -26,11 +19,8 @@ class Modelo_5:
 		numero_de_ejes: str = "0",
 		diametro_de_rueda: str = "000",
 		clase: str = "xxx",
-			#(7) 1   espacio(s)  de ( ) 
 		tipo: str = "xxx",
-			#(8)  1   espacio(s) de ( )
 		uso: str = "xxx",
-			#(9)  1   espacio(s) de ( )
 		fecha_de_emision_del_certificado: str = "00000000",
 		codigo_del_rif: str = "x",
 		numero_del_rif: str = "00000000",
@@ -39,17 +29,14 @@ class Modelo_5:
 		numero_de_la_planilla_de_liquidacion_de_gravamenes: str = "xxxxxxxxxxxxxxx",
 		fecha_de_la_planilla_de_liquidacion_de_gravamenes: str = "00000000",
 		numero_de_la_factura_de_adquisicion: str = "xxxxxxxxxxxxx",
-			#(10)  6   espacio(s) de ( )
 		fecha_de_la_factura_de_adquisicion: str = "00000000",
 		numero_del_certificado_de_origen_preimpreso: str = "xxxxxxxxx",
 		ano_de_fabricacion: str = "0000",
 		serial_niv_numero_de_identificacion_vehicular: str = "xxxxxxxxxxxxxxxxx",
 		serial_del_chasis: str = "xxxxxxxxxxxxxxxxx",
 		numero_de_la_factura_1: str = "xxxxxxxxxxxxxxx",
-			#(11)  9   espacio(s) de ( )
 		fecha_de_la_factura_1: str = "00000000",
 		numero_de_la_homologacion_intt: str = "xxxxxxxxxxxxxxx",
-			#(12)  15  espacio(s) de ( ) coincide con numero_de_la_homologacion_intt
 		fecha_de_la_homologacion_intt: str = "00000000",
 		servicio: str = "xxx",
 		numero_de_puestos: str = "000",
@@ -57,10 +44,7 @@ class Modelo_5:
 		fecha_de_la_rafaga: str = "00000000",
 		numero_de_secuencia_de_rafaga: str = "00",
 		serial_carrozado: str = "xxxxxxxxxxxxxxxxx",
-			#(13)  17  espacio(s) de ( ) coincide con serial_carrozado
 		tipo_de_combustible: str = "xxx",
-			#(14)  1  espacio(s) de ( )
-
 	) -> str:
 		self.tipo_de_movimiento = tipo_de_movimiento
 		self.numero_de_registro_correlativo_de_la_empresa = numero_de_registro_correlativo_de_la_empresa
@@ -106,14 +90,18 @@ class Modelo_5:
 		self.numero_de_secuencia_de_rafaga = numero_de_secuencia_de_rafaga
 		self.serial_carrozado = serial_carrozado
 		self.tipo_de_combustible = tipo_de_combustible
-
 		
 		self.campos_unidos = ''
+		self.cantidad_de_registros_tipo_ma = 0
+		self.cantidad_de_registros_tipo_mv = 0
+		self.cantidad_de_registros_tipo_me = 0
+		self.texto_de_cantidad_de_registros_tipo_ma = ""
+		self.texto_de_cantidad_de_registros_tipo_mv = ""
+		self.texto_de_cantidad_de_registros_tipo_me = ""
 		self.completar_caracteres_en_campos()
 		self.juntar_campos()
 	
 	def __str__(self):
-		# return self.campos_unidos
 		return "Clase \"Modelo_5\" instanciada correctamente."
 	
 	def juntar_campos(self):
@@ -234,11 +222,9 @@ class Modelo_5:
 						nuevo_valor = vars(self)[campo] + caracter_a_anadir
 						vars(self)[campo] = nuevo_valor
 
-			# if campo == "numero_de_la_homologacion_intt" or campo == "serial_carrozado":
 			if campo == "numero_de_la_homologacion_intt":
 				nuevo_valor = vars(self)[campo].replace("0", " ")
 				vars(self)[campo] = nuevo_valor
-
 			counter += 1
 
 	def imprimir_linea(self):
